@@ -23,15 +23,19 @@ public class hello {
     public String helloPath(@PathVariable String name, Model model) {
         model.addAttribute("nameKey", name);
         return "hello";
+
     }
-    @GetMapping("/hello-param")
-    public String helloParam(@RequestParam("name2") String name,
-                             @RequestParam("age")int age,
+    @GetMapping("/yumin-param")
+    public String yuminParam(@RequestParam("name") String name,
+                             @RequestParam("age") int age,
+                             @RequestParam("MBTI") String mbti,
+                             @RequestParam("hobby") String game,
                              @RequestParam("major") String major, Model model) {
         model.addAttribute("nameKey", name);
         model.addAttribute("ageKey", age);
+        model.addAttribute("MBTIKey", mbti);
+        model.addAttribute("hobbyKey", game);
         model.addAttribute("majorKey", major);
-
-        return "hello";
+        return "yumin";
     }
 }
