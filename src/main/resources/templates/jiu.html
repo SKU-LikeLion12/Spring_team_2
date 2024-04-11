@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멋대 12기 박지우</title>
+</head>
+<body>
+<header>
+    <h1><span th:text="'✮⋆｡박지우 ྀི✩⊹˚'"></span></h1>
+    <h3><span th:text="'🦁 멋대 12기 백엔드 아기사자입니다.🦁'"></span></h3>
+    <hr>
+</header>
+<nav>
+    <table>
+        <div>
+            <ul>
+                <tr>
+                    <th>
+                        CONTACT
+                    <td></td>
+                    <td></td>
+                    <td><li><a href="https://github.com/parkjiu0208" th:href="@{https://github.com/parkjiu0208}"> 깃허브</a></li></td>
+                    <td></td>
+                    <td></td>
+                    <td><li><a href="https://parkjiu.tistory.com/" th:href="@{https://parkjiu.tistory.com/}"> 티스토리</a></li></td>
+                    <td></td>
+                    <td></td>
+                    <td><li><a href="https://www.linkedin.com/in/%EC%A7%80%EC%9A%B0-%EB%B0%95-16167b23b/" th:href="@{https://www.linkedin.com/in/%EC%A7%80%EC%9A%B0-%EB%B0%95-16167b23b/}"> 링크드인</a></li></td>
+                    <td></td>
+                    <td></td>
+                    <td><li><a href="https://www.instagram.com/mydog_is_eraser/" th:href="@{https://www.instagram.com/mydog_is_eraser/}"> 인스타그램 (mydog_is_eraser)</a></li></td>
+                    <td></td>
+                    <td></td>
+                    <td><li><a href="mailto:joy002208@gmail.com" th:href="@{mailto:joy002208@gmail.com}">이메일</a></li></td>
+                    </th>
+                </tr>
+            </ul>
+        </div>
+</nav>
+</table>
+<hr>
+<main>
+    <br>
+    <b>Introduce</b>
+    <h4 th:text="'이름 ' + ${nameKey}"></h4>
+    <h4 th:text="'나이: ' + ${ageKey}"></h4>
+    <h4 th:text="'취미: ' + ${hobbyKey}"></h4>
+    <h4 th:text="'mbti: ' + ${mbtiKey}"></h4>
+    <h4 th:text="'학과: ' + ${majorKey}"></h4>
+    <form>
+        <fieldset>
+            <legend><span th:text="DEV_JIU"></span></legend>
+        </fieldset>
+    </form>
+</main>
+
+</body>
+</html>
