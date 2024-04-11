@@ -36,4 +36,21 @@ public class Hello {
         model.addAttribute("majorKey", major);
         return "hello";
     }
+
+    @GetMapping("/hello-juhee")
+    public String helloJuhee(@RequestParam("name") String name,
+                             @RequestParam("age") int age,
+                             @RequestParam("major") String major,
+                             @RequestParam("MBTI") String mbti,
+                             @RequestParam("hobby") String hobby,
+                             Model model) {
+        model.addAttribute("nameKey", name);
+        model.addAttribute("ageKey", age);
+        model.addAttribute("majorKey", major);
+        model.addAttribute("MBTIKey", mbti);
+        model.addAttribute("hobbyKey", hobby);
+        return "juhee";
+    }
+
+
 }
