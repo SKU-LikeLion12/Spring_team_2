@@ -7,35 +7,32 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class hello {
+public class Hello {
 
     @GetMapping("/hello")
     public String hello() {
         return "hello";
     }
+
     @GetMapping("/hello-data")
     public String helloData(Model model) {
-        model.addAttribute("nameKey", "유민~");
+        model.addAttribute("nameKey", "지우");
         return "hello";
     }
 
     @GetMapping("/hello/{name}")
-    public String helloPath(@PathVariable String name, Model model) {
+    public String helloPath(@PathVariable String name, Model model){
         model.addAttribute("nameKey", name);
         return "hello";
-
     }
-    @GetMapping("/yumin-param")
-    public String yuminParam(@RequestParam("name") String name,
+
+    @GetMapping("/hello-param")
+    public String helloParam(@RequestParam("name") String name,
                              @RequestParam("age") int age,
-                             @RequestParam("MBTI") String mbti,
-                             @RequestParam("hobby") String game,
-                             @RequestParam("major") String major, Model model) {
+                             @RequestParam("major") String major, Model model){
         model.addAttribute("nameKey", name);
         model.addAttribute("ageKey", age);
-        model.addAttribute("MBTIKey", mbti);
-        model.addAttribute("hobbyKey", game);
         model.addAttribute("majorKey", major);
-        return "yumin";
+        return "hello";
     }
 }
